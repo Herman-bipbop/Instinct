@@ -314,3 +314,51 @@ p {
      margin-top: -390px;
      height: auto;
 }
+/* Styles du menu burger */
+.menuBurger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menuBurger div {
+    width: 30px;
+    height: 4px;
+    background: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Cacher le menu en version mobile */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        right: 0;
+        top: 80px;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        background: #000;
+        text-align: center;
+        transition: height 0.3s ease;
+    }
+
+    .nav-links.open {
+        height: 250px; /* Ajuste selon le contenu */
+    }
+
+    .nav-links li {
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    .nav-links.open li {
+        opacity: 1;
+    }
+
+    .menuBurger {
+        display: flex;
+    }
+}

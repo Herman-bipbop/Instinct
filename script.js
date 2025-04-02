@@ -1,1 +1,9 @@
-<button class="btn-voir" onclick="window.location.href='nosmenus.htm'">Voir nos menus</button>;
+document.addEventListener("DOMContentLoaded", function () {
+    const menuBurger = document.querySelector(".menuBurger");
+    const navLinks = document.querySelector(".nav-links");
+
+    menuBurger.addEventListener("click", function () {
+        navLinks.classList.toggle("open");
+    });
+});
+
